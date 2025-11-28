@@ -1,23 +1,25 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 html {
-  block-size: 100%;
+  block-size: 100%; 
 }
 
+
 .page {
-  display:flex;
-  align-items: center;
-  inline-size: 1200px;
-  block-size: 100%;
-  margin: auto;
-  color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  background-color: #1b1919;
+/* селектор для класса .page — основной контейнер */
+  display:flex; 
+  align-items: center; 
+  inline-size: 1200px; 
+  block-size: 100%; 
+  margin: auto; /* центрирует контейнер по горизонтали и вертикали при наличии ограничения */
+  color: #fff; 
+  font-family: 'Fira Sans Condensed', sans-serif; 
+  font-size: 18px; 
+  background-color: #1b1919; 
 }
 
 h1,
@@ -30,314 +32,320 @@ ol,
 li,
 blockquote,
 fieldset {
-  margin: 0;
-  padding: 0;
+  margin: 0; 
+  padding: 0; 
 }
 
 ul,
 ol {
-  list-style: none;
+  list-style: none; /* убирает маркеры/номера у списков */
 }
 
 .visually-hidden {
-  /* обрезает элемент */
-  clip: rect(0 0 0 0);
+/* класс для скрытых визуально, но доступных для скринридеров элементов */
+  clip: rect(0 0 0 0); /*  обрезки содержимого для сокрытия */
   /* создает прямоугольник, который начинается от 50% с каждой стороны */
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  /* запрещает перенос текста на новую строку */
-  white-space: nowrap;
-  width: 1px;
-  border: none;
+  clip-path: inset(50%); 
+  height: 1px; 
+  overflow: hidden; /* скрывает переполнение */
+  position: absolute; 
+  white-space: nowrap; /* один непрерываемый ряд текста */
+  width: 1px; 
+  border: none; /* убирает рамку */
 }
 
 .content {
-  display: flex;
-  /*  устанавливает ширину элемента */
-  inline-size: 100%;
-  gap: 30px;
-  margin: 0 30px;
+/* основной контейнер для контента */
+  display: flex; 
+  inline-size: 100%; 
+  gap: 30px; 
+  margin: 0 30px; 
 }
 
 .button {
-  border: 1px solid #fff;
-  height: 34px;
-  cursor: pointer;
-  background-color: transparent;
-  text-align: center;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  color:#fff;
+/* общий класс для кнопок */
+  border: 1px solid #fff; 
+  height: 34px; 
+  cursor: pointer; 
+  background-color: transparent; 
+  text-align: center; 
+  font-family: 'Fira Sans Condensed', sans-serif; 
+  font-weight: 700; 
+  font-size: 18px; 
+  color:#fff; 
 }
 
 .result {
-  align-self: flex-end;
+/* контейнер для области с результатом */
+  align-self: flex-end; 
 }
 
 .result__video-container {
-  position: relative;
-  width: 100%;
-  height: 386px;
-  margin-bottom: 16px;
+/* контейнер для видео внутри результата */
+  position: relative; 
+  width: 100%; 
+  height: 386px; 
+  margin-bottom: 16px; 
 }
 
 .result__video {
-  position: relative;
-  width: 100%;
-  height: 100%;
+/* сам элемент видео */
+  position: relative; 
+  width: 100%; 
+  height: 100%; 
   /* медиа-контент полностью помещаться в контейнер, сохраняя свои пропорции. */
-  object-fit: contain;
-  /*  выравнивание изображения внутри контейнера */
-  object-position: center;
+  object-fit: contain; /* масштабирует медиа, сохраняя пропорции и показывая всё */
+  object-position: center; /* центрирует содержимое внутри области */
 }
 
 .search-form__fieldset {
-  display:flex;
-  flex-direction: column;
-  height: 100%;
-  width: fit-content;
+/* стиль для fieldset внутри формы поиска */
+  display:flex; 
+  flex-direction: column; 
+  height: 100%; 
+  width: fit-content; /* ширина по содержимому */
 }
 
 .search-form {
-  display:flex;
-  width: 100%;
-  margin-top: 14px;
-  justify-content: space-between;
+/* родительский класс формы поиска */
+  display:flex; 
+  width: 100%; 
+  margin-top: 14px; 
+  justify-content: space-between; /* распределяет элементы с равными промежутками */
 }
 
 .search-form__fieldset:nth-child(2){
-  margin-left: 44px;
+  margin-left: 44px; 
 }
 
 .search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  color:#fff;
- margin-bottom: 5px;
+/* заголовок внутри fieldset формы поиска */
+  font-family: 'Fira Sans Condensed', sans-serif; 
+  font-weight: 400; 
+  font-size: 18px; 
+  color:#fff; 
+ margin-bottom: 5px; 
 }
 
 .title {
-  font-family: Oswald, sans-serif;
+/* основной крупный заголовок на странице */
+  font-family: Oswald, sans-serif; 
   font-weight: 700;
-  font-size: 75px;
-  color:#fff;
-  /* межстрочный интервал */
-  line-height: 0.94;
-  text-transform: uppercase;
+  font-size: 75px; 
+  color:#fff; 
+  line-height: 0.94; 
+  text-transform: uppercase; 
 }
 
 .content__accent {
-  color:#545050;
+  color:#545050; 
 }
 
 .content__list {
-  position: relative;
-  height: 298px;
+/*контейнер карточек контента */
+  position: relative; 
+  height: 298px; 
   /*  управляет отображением контента, когда он выходит за границы своего контейнера*/
-  overflow: auto;
-  margin-top: 23px;
-  /* отключает горизонтальную прокрутку */
-  overflow-x: hidden;
+  overflow: auto; /* добавляет скролл при переполнении */
+  margin-top: 23px; 
+  overflow-x: hidden; /* скрывает горизонтальную полосу прокрутки */
 }
 
 .content__video-card {
-  display: inline-flex;
+/* карточка видео внутри списка */
+  display: inline-flex; /* строчно-блочный  */
   width: 100%;
 }
 
 .content__video-card-title {
-  font-family: Oswald, sans-serif;
-  font-weight: 700;
-  font-size: 30px;
-  /* е устанавливает фиксированную высоту строки  */
-  line-height: 30px;
-  color:#fff;
-  text-transform: uppercase;
+/* заголовок видео карточки */
+  font-family: Oswald, sans-serif; 
+  font-weight: 700; 
+  font-size: 30px; 
+  line-height: 30px; 
+  color:#fff; 
+  text-transform: uppercase; 
   max-width: 200px;
-  /* которое добавляет многоточие в конце текста, когда он не помещается в контейнер.  */
-  text-overflow: ellipsis;
-  /* запрещает перенос текста на новую строку */
-  white-space: nowrap;
-  /* отключает горизонтальную прокрутку */
-  overflow: hidden;
+  text-overflow: ellipsis; /* показывает "..." при переполнении */
+  white-space: nowrap; /* одна строка, без переноса */
+  overflow: hidden; /* скрывает лишний текст */
 }
 
 .content__video-card-description {
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  color:#fff;
+/* описание внутри видео-карточки */
+  font-family: 'Fira Sans Condensed', sans-serif; 
+  font-weight: 400; 
+  font-size: 18px; 
+  color:#fff; 
 }
 
 .content__video-card-thumbnail {
-  width: 194px;
-  margin-left: auto;
-  /* медиа-контент полностью помещаться в контейнер, сохраняя свои пропорции. */
-  object-fit: contain;
-  /*  выравнивание изображения внутри контейнера */
-  object-position: center;
+/* миниатюра (изображение) карточки */
+  width: 194px; 
+  margin-left: auto; 
+  object-fit: contain; /* сохраняет пропорции изображения внутри рамки */
+  object-position: center; 
 }
 
 .search-form__submit-button {
+/* кнопка отправки формы поиска */
   width: 194px;
-  margin-top: 20px;
-  margin-left: 36px;
-  text-align: center;
+  margin-top: 20px; 
+  margin-left: 36px; 
+  text-align: center; 
 }
 
 .more-button {
+/* кнопка "еще" или загрузки дополнительных карточек */
   width: 399px;
-  height: 33px;
+  height: 33px; 
 }
 
 .button:hover {
-  text-decoration: underline;
+  text-decoration: underline; 
 }
 
 .button:active {
-  background-color: #545050;
+/* псевдокласс при активном клике на .button */
+  background-color: #545050; 
 }
 
 .button:focus {
-  outline:none; 
+  outline:none; /* убирает стандартную обводку браузера */
 }
-/* создание контура вокруг элемента */
+
 .button:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
+  outline: 1px solid #fff; 
+  outline-offset: 1px; /* отступ между элементом и обводкой */
 }
 
 .content__list-item { 
-  width: 100%;
-  margin-bottom: 30px;
+/* отдельный элемент списка контента */
+  width: 100%; 
+  margin-bottom: 30px; 
 }
 
+
 .content__list-item:last-child {
-  margin-bottom: 0;
+  margin-bottom: 0; 
 }
 
 .search-form__pseudo-checkbox {
-  display: block;
-  border: 1px solid #fff;
-  width: 19px;
-  height: 19px;
-  margin-top: 1px;
+  display: block; 
+  border: 1px solid #fff; 
+  width: 19px; 
+  height: 19px; 
+  margin-top: 1px; 
 }
 
 
 .search-form__checkbox-list {
-  display: flex;
-  width: fit-content;
-  gap: 12px;
+/* контейнер для списка чекбоксов */
+  display: flex; 
+  width: fit-content; /* ширина по содержимому */
+  gap: 12px; 
 }
 
 .search-form__checkbox-list label:hover {
-  cursor: pointer;
+  cursor: pointer; 
   text-decoration: underline; 
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
-  /*  используется для генерации контента через псевдо-элементы ::before и ::after */
-  content: '';
-  display: block;
+  content: ''; 
+  display: block; 
   position: relative; 
-  top: 1px;
-  left: 1px;
-  width:15px;
-  height: 15px;
-  text-align: center;
+  top: 1px; 
+  left: 1px; 
+  width:15px; 
+  height: 15px; 
+  text-align: center; 
   background-color: #fff;
 }
 
 .search-form__textfield:focus {
-  /* полностью отключает контур у элемента */
-  outline: none;
+/* стиль для текстового поля при фокусе */
+  outline: none; /* убирает стандартную обводку при фокусе */
 }
 
 .search-form__textfield:active {
-  /* задаёт контур элемента */
- outline: 2px solid #fff;
+ outline: 2px solid #fff; /* белая рамка 2px при активном состоянии */
 }
 
 .search-form__fieldset {
-  border:none;
+  border:none; 
 }
 
 .search-form__label {
-  display: flex;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-weight: 400;
+  display: flex; 
+  font-family: 'Fira Sans Condensed', sans-serif; 
+  font-weight: 400; 
   font-size: 18px;
-  color:#fff;
-  align-self: flex-start;
+  color:#fff; 
+  align-self: flex-start; 
 }
 
 .search-form__label-text {
-  margin: 0 3px 8px 6px;
+  margin: 0 3px 8px 6px; 
 }
 
 
 .search-form__label-text:focus {
-  outline: none;
+  outline: none; /* убирает обводку при фокусе */
 }
 
 .search-form__label:has(:focus-visible) { 
-  /* задаёт контур элемента */
+/* когда внутри label есть элемент с видимым фокусом — применить стиль к label (современный селектор :has()) */
   outline: 1px solid #fff; 
-  /* расстояние между контуром и границей элемента */
-  outline-offset: 1px; 
+  outline-offset: 1px; /*  отступ между внешним контуром и элементом */
 } 
 
 .search-form__textfield {
-  width:225px;
-  appearance: none;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  border-left: none;
-  border-right: none;
-  padding: 2px 0;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  color: inherit;
+/* текстовое поле ввода в форме поиска */
+  width:225px; 
+  appearance: none; /* убирает нативный вид в некоторых браузерах */
+  border-top: 1px solid #fff; /* верхняя граница */
+  border-bottom: 1px solid #fff; 
+  border-left: none; 
+  border-right: none; /* убирает правую границу */
+  padding: 2px 0; 
+  font-family: 'Fira Sans Condensed', sans-serif; 
+  font-weight: 400; 
+  font-size: 18px; 
+  color: inherit; /* наследует цвет текста от родителя */
   background-color: inherit;  
 }
 
 .search-form__label:has(.search-form__pseudo-checkbox) {
-  height: 21px;
+  height: 21px; 
 }
 
 .search-form__label:has(.search-form__pseudo-checkbox):focus-visible {
-  /* задаёт контур элемента */
+
   outline: 1px solid #fff; 
-  /* расстояние между контуром и границей элемента */
-  outline-offset: 1px;
+  outline-offset: 1px; 
 }
 
 .content__card-link {
-  display: block;
+/* ссылка-обёртка для карточки контента */
+  display: block; 
 }
 
-/*выделение первой или активной карты */
+
 .content__card-link_current article {
-  background-color: #545050;
+  background-color: #545050; 
 }
 
 .content__card-link:hover h2 {
-  text-decoration: underline;
+  text-decoration: underline; 
 }
 
 .content__card-link:hover p {
-  text-decoration: underline;
+  text-decoration: underline; 
 }
 
 .content__card-link:focus-visible {
-  /* задаёт контур элемента */
-  outline: 1px solid #fff;
+  outline: 1px solid #fff; 
   margin: 2px; 
 }
 
